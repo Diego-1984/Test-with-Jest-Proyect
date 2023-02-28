@@ -27,17 +27,19 @@ const sum = (a,b) => {
     }
     module.exports = { sum, fromEuroToPound }
 
-    const fromDollarToYen = function(valueInDollar){
+    // A partir de aqui empiezan los problemas
+
+    const fromDollarToYen = function(valueInYen){
         // convertimos el valor a libras
-        let valueInDollar = fromEuroToYen * fromEuroToDollar;
+        let valueInYen = fromEuroToYen() * fromEuroToDollar();
         // retornamos el valor
-        return valueInDollar;
+        return valueInYen;
     }
     module.exports = { sum, fromDollarToYen }
 
     const fromYenToPound = function(valueInPound){
         // convertimos el valor a libras
-        let valueInPound = fromEuroToYen / fromEuroToPound;
+        let valueInPound = fromEuroToYen() / fromEuroToPound();
         // retornamos el valor
         return valueInPound;
     }
